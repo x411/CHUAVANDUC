@@ -21,3 +21,8 @@ D:\AN\WORK\CHUAVANDUC\Framework\bin\Debug\Framework.pdb
 D:\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.dll
 D:\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.pdb
 D:\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
+D:\Home\CHUAVANDUC\Framework\bin\Debug\Framework.dll
+D:\Home\CHUAVANDUC\Framework\bin\Debug\Framework.pdb
+D:\Home\CHUAVANDUC\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
+D:\Home\CHUAVANDUC\Framework\obj\Debug\Framework.dll
+D:\Home\CHUAVANDUC\Framework\obj\Debug\Framework.pdb

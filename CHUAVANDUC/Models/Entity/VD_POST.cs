@@ -10,13 +10,13 @@ namespace CHUAVANDUC.Models.Entity
         public long ID { get; set; }
         public string CategoryID { get; set; }
         public string CategoryName { get; set; }
-        public string C_alias { get; set; }
+        public string MetaTitleCategory { get; set; }
         public string MainMenuID { get; set; }
         public string MainMenuName { get; set; }
         public string SubMenuID { get; set; }
         public string SubMenuName { get; set; }
-        public string M_alias { get; set; }
-        public string S_alias { get; set; }
+        public string MetaTitleMainMenu { get; set; }
+        public string MetaTitleSubMenu { get; set; }
         public string TitlePost { get; set; }
         public string ImagesDisplay { get; set; }
         public string ContentPost { get; set; }
@@ -29,5 +29,11 @@ namespace CHUAVANDUC.Models.Entity
         public bool IsHome { get; set; }
         public bool IsActive { get; set; }
         public string Comment { get; set; }
+        public string ShortDescription { get; set; }
+        public string MetaKeywords { get; set; }
+        public string MetaDescription { get; set; }
+        public string MetaTitle { get; set; }
+        public string AdminComment { get; set; }
+        
     }
 }

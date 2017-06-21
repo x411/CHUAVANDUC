@@ -29,7 +29,9 @@ namespace CHUAVANDUC.Models
                         {
                             CategoryID = Convert.ToString(row["CategoryID"]),
                             CategoryName = Convert.ToString(row["CategoryName"]),
-                            C_alias = Convert.ToString(row["C_alias"]),
+                            MetaDescription = Convert.ToString(row["MetaDescription"]),
+                            MetaKeywords = Convert.ToString(row["MetaKeywords"]),
+                            MetaTitle = Convert.ToString(row["MetaTitle"]),
                             IsActive = Convert.ToBoolean(row["IsActive"]),
                             zIndex = Convert.ToInt32(row["zIndex"]),
                             IsHomeIndex = Convert.ToBoolean(row["IsHomeIndex"])
@@ -53,7 +55,9 @@ namespace CHUAVANDUC.Models
                 {
                     info.CategoryID = Convert.ToString(ds.Tables[0].Rows[0]["CategoryID"]);
                     info.CategoryName = Convert.ToString(ds.Tables[0].Rows[0]["CategoryName"]);
-                    info.C_alias = Convert.ToString(ds.Tables[0].Rows[0]["C_alias"]);
+                    info.MetaDescription = Convert.ToString(ds.Tables[0].Rows[0]["MetaDescription"]);
+                    info.MetaKeywords = Convert.ToString(ds.Tables[0].Rows[0]["MetaKeywords"]);
+                    info.MetaTitle = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitle"]);
                     info.IsActive = Convert.ToBoolean(ds.Tables[0].Rows[0]["IsActive"]);
                     info.zIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["zIndex"]);
                     info.IsHomeIndex = Convert.ToBoolean(ds.Tables[0].Rows[0]["IsHomeIndex"]);

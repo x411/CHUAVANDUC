@@ -163,6 +163,7 @@
     <Compile Include="Models\DataAccess\DataAccess.cs" />
     <Compile Include="Models\DataAccess\DBController.cs" />
     <Compile Include="Models\DataAccess\IDBController.cs" />
+    <Compile Include="Models\Entity\Comment.cs" />
     <Compile Include="Models\Entity\En_Decrypt.cs" />
     <Compile Include="Models\Entity\FileInformation.cs" />
     <Compile Include="Models\Entity\Helper.cs" />
@@ -183,6 +184,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\vd.sql" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -1481,6 +1483,7 @@
     <Content Include="Upload\images\banner\banner.jpg" />
     <Content Include="Upload\images\banner\banner01.jpg" />
     <Content Include="Upload\images\banner\banner1.jpg" />
+    <Content Include="Upload\vd.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1504,7 +1507,6 @@
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
   </ItemGroup>

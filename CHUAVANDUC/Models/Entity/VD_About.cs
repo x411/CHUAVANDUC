@@ -12,5 +12,9 @@ namespace CHUAVANDUC.Models.Entity
         public string URL { get; set; }
         public Boolean IsActive { get; set; }
         public DateTime CreatedDate { get; set; }
+        public string ShortDescription { get; set; }
+        public string MetaKeywords { get; set; }
+        public string MetaDescription { get; set; }
+        public string MetaTitle { get; set; }
     }
 }

@@ -71,14 +71,14 @@
                                     @foreach (var sub in main.lstSubMenu)
                                     {
                                         <li>
-                                            <a href="@Url.RouteUrl("PostInSubMenu", new { mainMenu = main.M_alias, subMenu = sub.S_alias, })" data-ajax="False">@sub.SubMenuName</a>
+                                            <a href="@Url.RouteUrl("PostInSubMenu", new { mainMenu = main.MetaTitle, subMenu = sub.MetaTitle, })" data-ajax="False">@sub.SubMenuName</a>
                                         </li>
                                     }
                                 </ul>
                             }
                             else
                             {
-                                <a href="@Url.RouteUrl("PostInMenu", new { mainMenu = main.M_alias})" data-ajax="False">@main.MainMenuName</a>
+                                <a href="@Url.RouteUrl("PostInMenu", new { mainMenu = main.MetaTitle})" data-ajax="False">@main.MainMenuName</a>
                             }
                         </li>
                         i++;

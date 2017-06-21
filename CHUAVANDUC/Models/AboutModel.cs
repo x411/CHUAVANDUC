@@ -30,6 +30,10 @@ namespace CHUAVANDUC.Models
                             ID = Convert.ToInt64(row["ID"]),
                             Name = Convert.ToString(row["Name"]),
                             URL = Convert.ToString(row["URL"]),
+                            ShortDescription = Convert.ToString(row["ShortDescription"]),
+                            MetaDescription = Convert.ToString(row["MetaDescription"]),
+                            MetaKeywords = Convert.ToString(row["MetaKeywords"]),
+                            MetaTitle = Convert.ToString(row["MetaTitle"]),
                             IsActive = Convert.ToBoolean(row["IsActive"]),
                             CreatedDate = Convert.ToDateTime(row["CreatedDate"])
                         });
@@ -53,6 +57,10 @@ namespace CHUAVANDUC.Models
                     info.ID = Convert.ToInt64(ds.Tables[0].Rows[0]["ID"]);
                     info.Name = Convert.ToString(ds.Tables[0].Rows[0]["Name"]);
                     info.URL = Convert.ToString(ds.Tables[0].Rows[0]["URL"]);
+                    info.ShortDescription = Convert.ToString(ds.Tables[0].Rows[0]["ShortDescription"]);
+                    info.MetaDescription = Convert.ToString(ds.Tables[0].Rows[0]["MetaDescription"]);
+                    info.MetaKeywords = Convert.ToString(ds.Tables[0].Rows[0]["MetaKeywords"]);
+                    info.MetaTitle = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitle"]);
                     info.IsActive = Convert.ToBoolean(ds.Tables[0].Rows[0]["IsActive"]);
                     info.CreatedDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["CreatedDate"]);
                 }

@@ -16,3 +16,8 @@ C:\Users\lpbin\Desktop\AN\WORK\CHUAVANDUC\Framework\bin\Debug\Framework.dll
 C:\Users\lpbin\Desktop\AN\WORK\CHUAVANDUC\Framework\bin\Debug\Framework.pdb
 C:\Users\lpbin\Desktop\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.dll
 C:\Users\lpbin\Desktop\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.pdb
+D:\AN\WORK\CHUAVANDUC\Framework\bin\Debug\Framework.dll
+D:\AN\WORK\CHUAVANDUC\Framework\bin\Debug\Framework.pdb
+D:\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.dll
+D:\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.pdb
+D:\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache

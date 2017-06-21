@@ -29,7 +29,9 @@ namespace CHUAVANDUC.Models
                         {
                             MainMenuID = Convert.ToString(row["MainMenuID"]),
                             MainMenuName = Convert.ToString(row["MainMenuName"]),
-                            M_alias = Convert.ToString(row["M_alias"]),
+                            MetaDescription = Convert.ToString(row["MetaDescription"]),
+                            MetaKeywords = Convert.ToString(row["MetaKeywords"]),
+                            MetaTitle = Convert.ToString(row["MetaTitle"]),
                             IsActive = Convert.ToBoolean(row["IsActive"]),
                             zIndex = Convert.ToInt32(row["zIndex"]),
                             lstSubMenu = getDetailsMainMenu(row["MainMenuID"].ToString()).lstSubMenu
@@ -55,7 +57,9 @@ namespace CHUAVANDUC.Models
                 {
                     info.MainMenuID = Convert.ToString(ds.Tables[0].Rows[0]["MainMenuID"]);
                     info.MainMenuName = Convert.ToString(ds.Tables[0].Rows[0]["MainMenuName"]);
-                    info.M_alias = Convert.ToString(ds.Tables[0].Rows[0]["M_alias"]);
+                    info.MetaDescription = Convert.ToString(ds.Tables[0].Rows[0]["MetaDescription"]);
+                    info.MetaKeywords = Convert.ToString(ds.Tables[0].Rows[0]["MetaKeywords"]);
+                    info.MetaTitle = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitle"]);
                     info.IsActive = Convert.ToBoolean(ds.Tables[0].Rows[0]["IsActive"]);
                     info.zIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["zIndex"]);
                 }
@@ -70,8 +74,10 @@ namespace CHUAVANDUC.Models
                             MainMenuName = Convert.ToString(ds.Tables[0].Rows[0]["MainMenuName"]),
                             SubMenuID = Convert.ToString(row["SubMenuID"]),
                             SubMenuName = Convert.ToString(row["SubMenuName"]),
-                            M_alias = Convert.ToString(row["M_alias"]),
-                            S_alias = Convert.ToString(row["S_alias"]),
+                            MetaTitleMainMenu = Convert.ToString(row["MetaTitleMainMenu"]),
+                            MetaDescription = Convert.ToString(row["MetaDescription"]),
+                            MetaKeywords = Convert.ToString(row["MetaKeywords"]),
+                            MetaTitle = Convert.ToString(row["MetaTitle"]),
                             IsActive = Convert.ToBoolean(row["IsActive"]),
                             zIndex = Convert.ToInt32(row["zIndex"])
                         });

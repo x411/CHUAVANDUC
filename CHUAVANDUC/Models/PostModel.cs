@@ -30,13 +30,13 @@ namespace CHUAVANDUC.Models
                             ID = Convert.ToInt64(row["ID"]),
                             CategoryID = Convert.ToString(row["CategoryID"]),
                             CategoryName = Convert.ToString(row["CategoryName"]),
-                            C_alias = Convert.ToString(row["C_alias"]),
+                            MetaTitleCategory = Convert.ToString(row["MetaTitleCategory"]),
                             MainMenuID = Convert.ToString(row["MainMenuID"]),
                             MainMenuName = Convert.ToString(row["MainMenuName"]),
-                            M_alias = Convert.ToString(row["M_alias"]),
+                            MetaTitleMainMenu = Convert.ToString(row["MetaTitleMainMenu"]),
                             SubMenuID = Convert.ToString(row["SubMenuID"]),
                             SubMenuName = Convert.ToString(row["SubMenuName"]),
-                            S_alias = Convert.ToString(row["S_alias"]),
+                            MetaTitleSubMenu = Convert.ToString(row["MetaTitleSubMenu"]),
                             TitlePost = Convert.ToString(row["TitlePost"]),
                             ContentPost = Convert.ToString(row["ContentPost"]),
                             CreatedBy = Convert.ToString(row["CreatedBy"]),
@@ -48,7 +48,12 @@ namespace CHUAVANDUC.Models
                             IsHome = Convert.ToBoolean(row["IsHome"]),
                             IsActive = Convert.ToBoolean(row["IsActive"]),
                             Comment = Convert.ToString(row["Comment"]),
-                            ImagesDisplay = Convert.ToString(row["ImagesDisplay"])
+                            ImagesDisplay = Convert.ToString(row["ImagesDisplay"]),
+                            ShortDescription = Convert.ToString(row["ShortDescription"]),
+                            MetaDescription = Convert.ToString(row["MetaDescription"]),
+                            MetaKeywords = Convert.ToString(row["MetaKeywords"]),
+                            MetaTitle = Convert.ToString(row["MetaTitle"]),
+                            AdminComment = Convert.ToString(row["AdminComment"])
                         });
                     }
                 }
@@ -74,13 +79,13 @@ namespace CHUAVANDUC.Models
                             ID = Convert.ToInt64(row["ID"]),
                             CategoryID = Convert.ToString(row["CategoryID"]),
                             CategoryName = Convert.ToString(row["CategoryName"]),
-                            C_alias = Convert.ToString(row["C_alias"]),
+                            MetaTitleCategory = Convert.ToString(row["MetaTitleCategory"]),
                             MainMenuID = Convert.ToString(row["MainMenuID"]),
                             MainMenuName = Convert.ToString(row["MainMenuName"]),
-                            M_alias = Convert.ToString(row["M_alias"]),
+                            MetaTitleMainMenu = Convert.ToString(row["MetaTitleMainMenu"]),
                             SubMenuID = Convert.ToString(row["SubMenuID"]),
                             SubMenuName = Convert.ToString(row["SubMenuName"]),
-                            S_alias = Convert.ToString(row["S_alias"]),
+                            MetaTitleSubMenu = Convert.ToString(row["MetaTitleSubMenu"]),
                             TitlePost = Convert.ToString(row["TitlePost"]),
                             ContentPost = Convert.ToString(row["ContentPost"]),
                             CreatedBy = Convert.ToString(row["CreatedBy"]),
@@ -92,7 +97,12 @@ namespace CHUAVANDUC.Models
                             IsHome = Convert.ToBoolean(row["IsHome"]),
                             IsActive = Convert.ToBoolean(row["IsActive"]),
                             Comment = Convert.ToString(row["Comment"]),
-                            ImagesDisplay = Convert.ToString(row["ImagesDisplay"])
+                            ImagesDisplay = Convert.ToString(row["ImagesDisplay"]),
+                            ShortDescription = Convert.ToString(row["ShortDescription"]),
+                            MetaDescription = Convert.ToString(row["MetaDescription"]),
+                            MetaKeywords = Convert.ToString(row["MetaKeywords"]),
+                            MetaTitle = Convert.ToString(row["MetaTitle"]),
+                            AdminComment = Convert.ToString(row["AdminComment"])
                         });
                     }
                 }
@@ -114,13 +124,13 @@ namespace CHUAVANDUC.Models
                     info.ID = Convert.ToInt64(ds.Tables[0].Rows[0]["ID"]);
                     info.CategoryID = Convert.ToString(ds.Tables[0].Rows[0]["CategoryID"]);
                     info.CategoryName = Convert.ToString(ds.Tables[0].Rows[0]["CategoryName"]);
-                    info.C_alias = Convert.ToString(ds.Tables[0].Rows[0]["C_alias"]);
+                    info.MetaTitleCategory = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitleCategory"]);
                     info.MainMenuID = Convert.ToString(ds.Tables[0].Rows[0]["MainMenuID"]);
                     info.MainMenuName = Convert.ToString(ds.Tables[0].Rows[0]["MainMenuName"]);
-                    info.M_alias = Convert.ToString(ds.Tables[0].Rows[0]["M_alias"]);
+                    info.MetaTitleMainMenu = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitleMainMenu"]);
                     info.SubMenuID = Convert.ToString(ds.Tables[0].Rows[0]["SubMenuID"]);
                     info.SubMenuName = Convert.ToString(ds.Tables[0].Rows[0]["SubMenuName"]);
-                    info.S_alias = Convert.ToString(ds.Tables[0].Rows[0]["S_alias"]);
+                    info.MetaTitleSubMenu = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitleSubMenu"]);
                     info.TitlePost = Convert.ToString(ds.Tables[0].Rows[0]["TitlePost"]);
                     info.ContentPost = Convert.ToString(ds.Tables[0].Rows[0]["ContentPost"]);
                     info.CreatedBy = Convert.ToString(ds.Tables[0].Rows[0]["CreatedBy"]);
@@ -133,6 +143,11 @@ namespace CHUAVANDUC.Models
                     info.IsActive = Convert.ToBoolean(ds.Tables[0].Rows[0]["IsActive"]);
                     info.Comment = Convert.ToString(ds.Tables[0].Rows[0]["Comment"]);
                     info.ImagesDisplay = Convert.ToString(ds.Tables[0].Rows[0]["ImagesDisplay"]);
+                    info.ShortDescription = Convert.ToString(ds.Tables[0].Rows[0]["ShortDescription"]);
+                    info.MetaDescription = Convert.ToString(ds.Tables[0].Rows[0]["MetaDescription"]);
+                    info.MetaKeywords = Convert.ToString(ds.Tables[0].Rows[0]["MetaKeywords"]);
+                    info.MetaTitle = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitle"]);
+                    info.AdminComment = Convert.ToString(ds.Tables[0].Rows[0]["AdminComment"]);
                 }
             }
 
@@ -156,13 +171,13 @@ namespace CHUAVANDUC.Models
                             ID = Convert.ToInt64(row["ID"]),
                             CategoryID = Convert.ToString(row["CategoryID"]),
                             CategoryName = Convert.ToString(row["CategoryName"]),
-                            C_alias = Convert.ToString(row["C_alias"]),
+                            MetaTitleCategory = Convert.ToString(row["MetaTitleCategory"]),
                             MainMenuID = Convert.ToString(row["MainMenuID"]),
                             MainMenuName = Convert.ToString(row["MainMenuName"]),
-                            M_alias = Convert.ToString(row["M_alias"]),
+                            MetaTitleMainMenu = Convert.ToString(row["MetaTitleMainMenu"]),
                             SubMenuID = Convert.ToString(row["SubMenuID"]),
                             SubMenuName = Convert.ToString(row["SubMenuName"]),
-                            S_alias = Convert.ToString(row["S_alias"]),
+                            MetaTitleSubMenu = Convert.ToString(row["MetaTitleSubMenu"]),
                             TitlePost = Convert.ToString(row["TitlePost"]),
                             ContentPost = Convert.ToString(row["ContentPost"]),
                             CreatedBy = Convert.ToString(row["CreatedBy"]),
@@ -174,7 +189,12 @@ namespace CHUAVANDUC.Models
                             IsHome = Convert.ToBoolean(row["IsHome"]),
                             IsActive = Convert.ToBoolean(row["IsActive"]),
                             Comment = Convert.ToString(row["Comment"]),
-                            ImagesDisplay = Convert.ToString(row["ImagesDisplay"])
+                            ImagesDisplay = Convert.ToString(row["ImagesDisplay"]),
+                            ShortDescription = Convert.ToString(row["ShortDescription"]),
+                            MetaDescription = Convert.ToString(row["MetaDescription"]),
+                            MetaKeywords = Convert.ToString(row["MetaKeywords"]),
+                            MetaTitle = Convert.ToString(row["MetaTitle"]),
+                            AdminComment = Convert.ToString(row["AdminComment"])
                         });
                     }
                 }
@@ -200,13 +220,13 @@ namespace CHUAVANDUC.Models
                             ID = Convert.ToInt64(row["ID"]),
                             CategoryID = Convert.ToString(row["CategoryID"]),
                             CategoryName = Convert.ToString(row["CategoryName"]),
-                            C_alias = Convert.ToString(row["C_alias"]),
+                            MetaTitleCategory = Convert.ToString(row["MetaTitleCategory"]),
                             MainMenuID = Convert.ToString(row["MainMenuID"]),
                             MainMenuName = Convert.ToString(row["MainMenuName"]),
-                            M_alias = Convert.ToString(row["M_alias"]),
+                            MetaTitleMainMenu = Convert.ToString(row["MetaTitleMainMenu"]),
                             SubMenuID = Convert.ToString(row["SubMenuID"]),
                             SubMenuName = Convert.ToString(row["SubMenuName"]),
-                            S_alias = Convert.ToString(row["S_alias"]),
+                            MetaTitleSubMenu = Convert.ToString(row["MetaTitleSubMenu"]),
                             TitlePost = Convert.ToString(row["TitlePost"]),
                             ContentPost = Convert.ToString(row["ContentPost"]),
                             CreatedBy = Convert.ToString(row["CreatedBy"]),
@@ -218,7 +238,12 @@ namespace CHUAVANDUC.Models
                             IsHome = Convert.ToBoolean(row["IsHome"]),
                             IsActive = Convert.ToBoolean(row["IsActive"]),
                             Comment = Convert.ToString(row["Comment"]),
-                            ImagesDisplay = Convert.ToString(row["ImagesDisplay"])
+                            ImagesDisplay = Convert.ToString(row["ImagesDisplay"]),
+                            ShortDescription = Convert.ToString(row["ShortDescription"]),
+                            MetaDescription = Convert.ToString(row["MetaDescription"]),
+                            MetaKeywords = Convert.ToString(row["MetaKeywords"]),
+                            MetaTitle = Convert.ToString(row["MetaTitle"]),
+                            AdminComment = Convert.ToString(row["AdminComment"])
                         });
                     }
                 }
@@ -240,13 +265,13 @@ namespace CHUAVANDUC.Models
                     info.ID = Convert.ToInt64(ds.Tables[0].Rows[0]["ID"]);
                     info.CategoryID = Convert.ToString(ds.Tables[0].Rows[0]["CategoryID"]);
                     info.CategoryName = Convert.ToString(ds.Tables[0].Rows[0]["CategoryName"]);
-                    info.C_alias = Convert.ToString(ds.Tables[0].Rows[0]["C_alias"]);
+                    info.MetaTitleCategory = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitleCategory"]);
                     info.MainMenuID = Convert.ToString(ds.Tables[0].Rows[0]["MainMenuID"]);
                     info.MainMenuName = Convert.ToString(ds.Tables[0].Rows[0]["MainMenuName"]);
-                    info.M_alias = Convert.ToString(ds.Tables[0].Rows[0]["M_alias"]);
+                    info.MetaTitleMainMenu = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitleMainMenu"]);
                     info.SubMenuID = Convert.ToString(ds.Tables[0].Rows[0]["SubMenuID"]);
                     info.SubMenuName = Convert.ToString(ds.Tables[0].Rows[0]["SubMenuName"]);
-                    info.S_alias = Convert.ToString(ds.Tables[0].Rows[0]["S_alias"]);
+                    info.MetaTitleSubMenu = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitleSubMenu"]);
                     info.TitlePost = Convert.ToString(ds.Tables[0].Rows[0]["TitlePost"]);
                     info.ContentPost = Convert.ToString(ds.Tables[0].Rows[0]["ContentPost"]);
                     info.CreatedBy = Convert.ToString(ds.Tables[0].Rows[0]["CreatedBy"]);
@@ -259,6 +284,11 @@ namespace CHUAVANDUC.Models
                     info.IsActive = Convert.ToBoolean(ds.Tables[0].Rows[0]["IsActive"]);
                     info.Comment = Convert.ToString(ds.Tables[0].Rows[0]["Comment"]);
                     info.ImagesDisplay = Convert.ToString(ds.Tables[0].Rows[0]["ImagesDisplay"]);
+                    info.ShortDescription = Convert.ToString(ds.Tables[0].Rows[0]["ShortDescription"]);
+                    info.MetaDescription = Convert.ToString(ds.Tables[0].Rows[0]["MetaDescription"]);
+                    info.MetaKeywords = Convert.ToString(ds.Tables[0].Rows[0]["MetaKeywords"]);
+                    info.MetaTitle = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitle"]);
+                    info.AdminComment = Convert.ToString(ds.Tables[0].Rows[0]["AdminComment"]);
                 }
             }
 

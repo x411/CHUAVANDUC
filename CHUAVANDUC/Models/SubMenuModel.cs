@@ -27,8 +27,10 @@ namespace CHUAVANDUC.Models
                     info.MainMenuName = Convert.ToString(ds.Tables[0].Rows[0]["MainMenuName"]);
                     info.SubMenuID = Convert.ToString(ds.Tables[0].Rows[0]["SubMenuID"]);
                     info.SubMenuName = Convert.ToString(ds.Tables[0].Rows[0]["SubMenuName"]);
-                    info.M_alias = Convert.ToString(ds.Tables[0].Rows[0]["M_alias"]);
-                    info.S_alias = Convert.ToString(ds.Tables[0].Rows[0]["S_alias"]);
+                    info.MetaTitleMainMenu = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitleMainMenu"]);
+                    info.MetaDescription = Convert.ToString(ds.Tables[0].Rows[0]["MetaDescription"]);
+                    info.MetaKeywords = Convert.ToString(ds.Tables[0].Rows[0]["MetaKeywords"]);
+                    info.MetaTitle = Convert.ToString(ds.Tables[0].Rows[0]["MetaTitle"]);
                     info.IsActive = Convert.ToBoolean(ds.Tables[0].Rows[0]["IsActive"]);
                     info.zIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["zIndex"]);
                 }

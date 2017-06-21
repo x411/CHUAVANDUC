@@ -1,0 +1,1562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E25D29D5-FC03-41FF-9889-BA55EF5327D2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CHUAVANDUC</RootNamespace>
+    <AssemblyName>CHUAVANDUC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AboutModel.cs" />
+    <Compile Include="Models\AreasCouserModel.cs" />
+    <Compile Include="Models\Auth\CustomAuthAttribute.cs" />
+    <Compile Include="Models\Auth\CustomRoleProvider.cs" />
+    <Compile Include="Models\Auth\CustomRouter.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\DataAccess\DataAccess.cs" />
+    <Compile Include="Models\DataAccess\DBController.cs" />
+    <Compile Include="Models\DataAccess\IDBController.cs" />
+    <Compile Include="Models\Entity\En_Decrypt.cs" />
+    <Compile Include="Models\Entity\FileInformation.cs" />
+    <Compile Include="Models\Entity\Helper.cs" />
+    <Compile Include="Models\Entity\VD_About.cs" />
+    <Compile Include="Models\Entity\VD_AREAS.cs" />
+    <Compile Include="Models\Entity\VD_Category.cs" />
+    <Compile Include="Models\Entity\VD_COURSE.cs" />
+    <Compile Include="Models\Entity\VD_HOCVIEN.cs" />
+    <Compile Include="Models\Entity\VD_MainMenu.cs" />
+    <Compile Include="Models\Entity\VD_POST.cs" />
+    <Compile Include="Models\Entity\VD_SubMenu.cs" />
+    <Compile Include="Models\Entity\VD_USERSTYPE.cs" />
+    <Compile Include="Models\HocVienModel.cs" />
+    <Compile Include="Models\LoginModels.cs" />
+    <Compile Include="Models\MainMenuModel.cs" />
+    <Compile Include="Models\PostModel.cs" />
+    <Compile Include="Models\SubMenuModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\devoops\css\font-awesome.css" />
+    <Content Include="Content\devoops\css\font-awesome.min.css" />
+    <Content Include="Content\devoops\css\style_v1.css" />
+    <Content Include="Content\devoops\css\style_v2.css" />
+    <Content Include="Content\devoops\css\upload.css" />
+    <Content Include="Content\devoops\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\devoops\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\devoops\img\btUpload.png" />
+    <Content Include="Content\devoops\img\chevron-left.png" />
+    <Content Include="Content\devoops\img\chevron-right.png" />
+    <Content Include="Content\devoops\img\devoops_pattern_b10.png" />
+    <Content Include="Content\devoops\img\Loadingstatus.gif" />
+    <Content Include="Content\devoops\img\sort-asc.png" />
+    <Content Include="Content\devoops\img\sort-desc.png" />
+    <Content Include="Content\devoops\img\sort.png" />
+    <Content Include="Content\devoops\img\times.png" />
+    <Content Include="Content\devoops\img\ui-accordion-down.png" />
+    <Content Include="Content\devoops\img\ui-accordion-right.png" />
+    <Content Include="Content\devoops\img\ui-left.png" />
+    <Content Include="Content\devoops\img\ui-right.png" />
+    <Content Include="Content\devoops\js\devoops-mod.js" />
+    <Content Include="Content\devoops\js\devoops.js" />
+    <Content Include="Content\devoops\mobirise\demo-files\demo.css" />
+    <Content Include="Content\devoops\mobirise\demo-files\demo.js" />
+    <Content Include="Content\devoops\mobirise\demo.html" />
+    <Content Include="Content\devoops\mobirise\fonts\mobirise.svg" />
+    <Content Include="Content\devoops\mobirise\style.css" />
+    <Content Include="Content\devoops\plugins\alertify\lib\alertify.js" />
+    <Content Include="Content\devoops\plugins\alertify\lib\alertify.min.js" />
+    <Content Include="Content\devoops\plugins\alertify\themes\alertify.bootstrap.css" />
+    <Content Include="Content\devoops\plugins\alertify\themes\alertify.core.css" />
+    <Content Include="Content\devoops\plugins\alertify\themes\alertify.default.css" />
+    <Content Include="Content\devoops\plugins\amcharts\amcharts.js" />
+    <Content Include="Content\devoops\plugins\amcharts\exporting\amexport.js" />
+    <Content Include="Content\devoops\plugins\amcharts\exporting\canvg.js" />
+    <Content Include="Content\devoops\plugins\amcharts\exporting\filesaver.js" />
+    <Content Include="Content\devoops\plugins\amcharts\exporting\jspdf.js" />
+    <Content Include="Content\devoops\plugins\amcharts\exporting\jspdf.plugin.addimage.js" />
+    <Content Include="Content\devoops\plugins\amcharts\exporting\rgbcolor.js" />
+    <Content Include="Content\devoops\plugins\amcharts\funnel.js" />
+    <Content Include="Content\devoops\plugins\amcharts\gauge.js" />
+    <Content Include="Content\devoops\plugins\amcharts\images\0.gif" />
+    <Content Include="Content\devoops\plugins\amcharts\images\1.gif" />
+    <Content Include="Content\devoops\plugins\amcharts\images\2.gif" />
+    <Content Include="Content\devoops\plugins\amcharts\images\3.gif" />
+    <Content Include="Content\devoops\plugins\amcharts\images\bg.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\images\bgSky.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\images\bicycle.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\board.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\images\car.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\dragIcon.gif" />
+    <Content Include="Content\devoops\plugins\amcharts\images\dragIconBlack.gif" />
+    <Content Include="Content\devoops\plugins\amcharts\images\dragIconH.gif" />
+    <Content Include="Content\devoops\plugins\amcharts\images\dragIconHBlack.gif" />
+    <Content Include="Content\devoops\plugins\amcharts\images\export.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\exportWhite.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\lens.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\lensWhite.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\logo.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\motorcycle.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\redstar.png" />
+    <Content Include="Content\devoops\plugins\amcharts\images\star.png" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\az.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\bg.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\de.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\es.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\fi.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\fo.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\fr.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\hr.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\hu.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\id.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\is.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\it.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\lt.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\lv.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\mk.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\mn.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\mt.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\nl.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\no.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\pl.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\pt.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\ro.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\ru.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\rw.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\sk.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\so.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\th.js" />
+    <Content Include="Content\devoops\plugins\amcharts\lang\tr.js" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern1.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern10.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern11.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern12.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern13.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern14.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern15.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern16.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern17.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern18.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern19.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern2.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern20.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern21.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern3.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern4.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern5.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern6.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern7.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern8.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\black\pattern9.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\chalk\pattern1.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\chalk\pattern1r.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\chalk\pattern2.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\chalk\pattern3.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\chalk\pattern4.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\chalk\pattern5.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\chalk\pattern6.jpg" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern1.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern10.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern11.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern12.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern13.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern14.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern15.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern16.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern17.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern18.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern19.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern2.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern20.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern21.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern3.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern4.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern5.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern6.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern7.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern8.png" />
+    <Content Include="Content\devoops\plugins\amcharts\patterns\white\pattern9.png" />
+    <Content Include="Content\devoops\plugins\amcharts\pie.js" />
+    <Content Include="Content\devoops\plugins\amcharts\radar.js" />
+    <Content Include="Content\devoops\plugins\amcharts\serial.js" />
+    <Content Include="Content\devoops\plugins\amcharts\themes\black.js" />
+    <Content Include="Content\devoops\plugins\amcharts\themes\chalk.js" />
+    <Content Include="Content\devoops\plugins\amcharts\themes\dark.js" />
+    <Content Include="Content\devoops\plugins\amcharts\themes\light.js" />
+    <Content Include="Content\devoops\plugins\amcharts\themes\patterns.js" />
+    <Content Include="Content\devoops\plugins\amcharts\xy.js" />
+    <Content Include="Content\devoops\plugins\autocomplete\jquery.autocomplete.js" />
+    <Content Include="Content\devoops\plugins\autocomplete\styles.css" />
+    <Content Include="Content\devoops\plugins\autosize\jquery.autosize.js" />
+    <Content Include="Content\devoops\plugins\autosize\jquery.autosize.min.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\bootstrapValidator.css" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\bootstrapValidator.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\bootstrapValidator.min.css" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\bootstrapValidator.min.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\ar_MA.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\be_FR.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\be_NL.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\bg_BG.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\cs_CZ.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\da_DK.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\de_DE.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\en_US.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\es_CL.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\es_ES.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\fa_IR.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\fr_FR.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\gr_EL.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\hu_HU.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\it_IT.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\ja_JP.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\nl_NL.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\no_NO.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\pl_PL.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\pt_BR.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\ro_RO.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\ru_RU.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\sr_RS.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\sv_SE.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\th_TH.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\tr_TR.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\ua_UA.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\vi_VN.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\zh_CN.js" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\language\zh_TW.js" />
+    <Content Include="Content\devoops\plugins\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\devoops\plugins\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\devoops\plugins\bootstrap\bootstrap.css" />
+    <Content Include="Content\devoops\plugins\bootstrap\bootstrap.js" />
+    <Content Include="Content\devoops\plugins\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\devoops\plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\devoops\plugins\camera\blank.gif" />
+    <Content Include="Content\devoops\plugins\camera\camera-loader.gif" />
+    <Content Include="Content\devoops\plugins\camera\camera.css" />
+    <Content Include="Content\devoops\plugins\camera\camera.js" />
+    <Content Include="Content\devoops\plugins\camera\camera.min.js" />
+    <Content Include="Content\devoops\plugins\camera\camera_skins.png" />
+    <Content Include="Content\devoops\plugins\camera\jquery.easing.1.3.js" />
+    <Content Include="Content\devoops\plugins\chartist\chartist.js" />
+    <Content Include="Content\devoops\plugins\chartist\chartist.min.css" />
+    <Content Include="Content\devoops\plugins\chartist\chartist.min.js" />
+    <Content Include="Content\devoops\plugins\Charts\Chart.js" />
+    <Content Include="Content\devoops\plugins\Charts\Chart.min.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\adapters\jquery.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\build-config.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\ckeditor.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\config.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\contents.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\af.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ar.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\bg.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\bn.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\bs.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ca.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\cs.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\cy.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\da.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\de.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\el.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\en-au.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\en-ca.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\en-gb.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\en.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\eo.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\es.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\et.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\eu.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\fa.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\fi.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\fo.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\fr-ca.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\fr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\gl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\gu.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\he.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\hi.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\hr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\hu.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\id.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\is.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\it.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ja.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ka.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\km.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ko.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ku.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\lt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\lv.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\mk.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\mn.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ms.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\nb.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\nl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\no.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\pl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\pt-br.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\pt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ro.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ru.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\si.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\sk.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\sl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\sq.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\sr-latn.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\sr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\sv.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\th.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\tr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\tt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\ug.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\uk.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\vi.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\zh-cn.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\lang\zh.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\filebrowser\plugin.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\icons.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\imagebrowser\browser\browser.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\imagebrowser\browser\browser.html" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\imagebrowser\browser\browser.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\imagebrowser\browser\jquery-1.9.1.min.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\imagebrowser\LICENSE.txt" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\imagebrowser\plugin.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\dialog.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\editor.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\icons.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\close.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\images\spinner.gif" />
+    <Content Include="Content\devoops\plugins\ckeditor\styles.js" />
+    <Content Include="Content\devoops\plugins\clndr-calendar\clndr.css" />
+    <Content Include="Content\devoops\plugins\clndr-calendar\clndr.js" />
+    <Content Include="Content\devoops\plugins\clndr-calendar\underscore.js" />
+    <Content Include="Content\devoops\plugins\colorpicker\css\bootstrap-colorpicker.css" />
+    <Content Include="Content\devoops\plugins\colorpicker\css\bootstrap-colorpicker.min.css" />
+    <Content Include="Content\devoops\plugins\colorpicker\img\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Content\devoops\plugins\colorpicker\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Content\devoops\plugins\colorpicker\img\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Content\devoops\plugins\colorpicker\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="Content\devoops\plugins\colorpicker\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Content\devoops\plugins\colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="Content\devoops\plugins\colorpicker\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Content\devoops\plugins\d3\d3.js" />
+    <Content Include="Content\devoops\plugins\d3\d3.min.js" />
+    <Content Include="Content\devoops\plugins\datatables\copy_csv_xls_pdf.swf" />
+    <Content Include="Content\devoops\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="Content\devoops\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Content\devoops\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\devoops\plugins\datatables\TableTools.js" />
+    <Content Include="Content\devoops\plugins\datatables\TableTools_orig.js" />
+    <Content Include="Content\devoops\plugins\datatables\ZeroClipboard.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\build\jquery.datetimepicker.full.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\build\jquery.datetimepicker.full.min.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\build\jquery.datetimepicker.min.css" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\build\jquery.datetimepicker.min.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\index.html" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\jquery.datetimepicker.css" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\jquery.datetimepicker.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\jquery.datetimepicker.min.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\jquery.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\MIT-LICENSE.txt" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\screen\1.png" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\screen\2.png" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\screen\3.1.png" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\screen\3.png" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\screen\4.png" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\screen\5.png" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\screen\6.png" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\tests\input_in_container_fixed_to_bottom_of_viewport.html" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\tests\input_in_container_fixed_to_top_of_viewport.html" />
+    <Content Include="Content\devoops\plugins\datetimepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\devoops\plugins\datetimepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker\moment-with-langs.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker\moment-with-langs.min.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker\moment.js" />
+    <Content Include="Content\devoops\plugins\datetimepicker\moment.min.js" />
+    <Content Include="Content\devoops\plugins\fancybox\blank.gif" />
+    <Content Include="Content\devoops\plugins\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Content\devoops\plugins\fancybox\fancybox_loading.gif" />
+    <Content Include="Content\devoops\plugins\fancybox\fancybox_overlay.png" />
+    <Content Include="Content\devoops\plugins\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Content\devoops\plugins\fancybox\fancybox_sprite.png" />
+    <Content Include="Content\devoops\plugins\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="Content\devoops\plugins\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Content\devoops\plugins\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Content\devoops\plugins\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="Content\devoops\plugins\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\devoops\plugins\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Content\devoops\plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="Content\devoops\plugins\fancybox\jquery.fancybox.js" />
+    <Content Include="Content\devoops\plugins\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="Content\devoops\plugins\fineuploader\edit.gif" />
+    <Content Include="Content\devoops\plugins\fineuploader\fineuploader-5.0.5.css" />
+    <Content Include="Content\devoops\plugins\fineuploader\fineuploader-5.0.5.js" />
+    <Content Include="Content\devoops\plugins\fineuploader\fineuploader-5.0.5.min.css" />
+    <Content Include="Content\devoops\plugins\fineuploader\fineuploader-5.0.5.min.js" />
+    <Content Include="Content\devoops\plugins\fineuploader\iframe.xss.response-5.0.5.js" />
+    <Content Include="Content\devoops\plugins\fineuploader\jquery.fineuploader-5.0.5.js" />
+    <Content Include="Content\devoops\plugins\fineuploader\jquery.fineuploader-5.0.5.min.js" />
+    <Content Include="Content\devoops\plugins\fineuploader\loading.gif" />
+    <Content Include="Content\devoops\plugins\fineuploader\processing.gif" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\dist\jquery.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\MIT-LICENSE.txt" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax\jsonp.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax\load.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax\parseJSON.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax\parseXML.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax\script.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax\var\nonce.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax\var\rquery.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\ajax\xhr.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\attributes.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\attributes\attr.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\attributes\classes.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\attributes\prop.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\attributes\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\attributes\val.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\callbacks.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\core.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\core\access.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\core\init.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\core\parseHTML.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\core\ready.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\addGetHookIf.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\curCSS.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\defaultDisplay.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\swap.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\var\cssExpand.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\var\isHidden.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\var\rmargin.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\data.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\data\accepts.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\data\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\deferred.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\deprecated.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\dimensions.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\effects.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\effects\animatedSelector.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\effects\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\effects\Tween.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\event.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\event\ajax.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\event\alias.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\event\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\exports\amd.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\exports\global.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\intro.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\jquery.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\manipulation.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\manipulation\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\offset.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\outro.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\queue.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\queue\delay.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\selector-sizzle.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\selector.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\serialize.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\traversing.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\traversing\findFilter.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\class2type.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\concat.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\deletedIds.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\hasOwn.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\indexOf.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\pnum.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\push.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\rnotwhite.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\slice.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\strundefined.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\var\toString.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\wrap.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\changelog.txt" />
+    <Content Include="Content\devoops\plugins\FlexSlider\flexslider.css" />
+    <Content Include="Content\devoops\plugins\FlexSlider\fonts\flexslider-icon.svg" />
+    <Content Include="Content\devoops\plugins\FlexSlider\images\bg_play_pause.png" />
+    <Content Include="Content\devoops\plugins\FlexSlider\jquery.flexslider-min.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\jquery.flexslider.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\dist\jquery.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\dist\jquery.min.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\MIT-LICENSE.txt" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax\jsonp.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax\load.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax\parseJSON.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax\parseXML.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax\script.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax\var\nonce.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax\var\rquery.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\ajax\xhr.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\attributes.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\attributes\attr.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\attributes\classes.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\attributes\prop.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\attributes\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\attributes\val.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\callbacks.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\core.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\core\access.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\core\init.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\core\parseHTML.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\core\ready.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\addGetHookIf.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\curCSS.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\defaultDisplay.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\swap.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\var\cssExpand.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\var\isHidden.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\var\rmargin.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\data.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\data\accepts.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\data\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\deferred.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\deprecated.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\dimensions.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\effects.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\effects\animatedSelector.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\effects\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\effects\Tween.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\event.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\event\ajax.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\event\alias.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\event\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\exports\amd.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\exports\global.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\intro.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\jquery.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\manipulation.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\manipulation\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\offset.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\outro.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\queue.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\queue\delay.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\selector-sizzle.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\selector.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\serialize.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\test\data\empty.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\test\data\mixed_sort.html" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\test\data\testinit.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\test\index.html" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\test\jquery.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\test\unit\extending.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\test\unit\selector.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\test\unit\utilities.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\traversing.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\traversing\findFilter.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\class2type.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\concat.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\deletedIds.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\hasOwn.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\indexOf.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\pnum.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\push.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\rnotwhite.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\slice.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\strundefined.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\support.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\var\toString.js" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\wrap.js" />
+    <Content Include="Content\devoops\plugins\flot\jquery.flot.js" />
+    <Content Include="Content\devoops\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Content\devoops\plugins\flot\jquery.flot.time.js" />
+    <Content Include="Content\devoops\plugins\flot\LICENSE.txt" />
+    <Content Include="Content\devoops\plugins\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\devoops\plugins\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\devoops\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Content\devoops\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Content\devoops\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Content\devoops\plugins\fullcalendar\gcal.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang-all.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\ar-ma.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\ar-sa.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\ar.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\bg.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\ca.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\cs.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\da.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\de-at.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\de.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\el.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\en-au.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\en-ca.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\en-gb.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\es.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\fa.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\fi.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\fr-ca.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\fr.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\hi.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\hr.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\hu.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\id.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\is.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\it.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\ja.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\ko.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\lt.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\lv.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\nl.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\pl.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\pt-br.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\pt.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\ro.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\ru.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\sk.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\sl.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\sr.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\sv.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\th.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\tr.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\uk.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\vi.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\zh-cn.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\lang\zh-tw.js" />
+    <Content Include="Content\devoops\plugins\fullcalendar\license.txt" />
+    <Content Include="Content\devoops\plugins\jis\images\elements\arrow-left.png" />
+    <Content Include="Content\devoops\plugins\jis\images\elements\arrow-right.png" />
+    <Content Include="Content\devoops\plugins\jis\images\elements\pagination-selected.png" />
+    <Content Include="Content\devoops\plugins\jis\images\elements\pagination.png" />
+    <Content Include="Content\devoops\plugins\jis\images\loading-white.gif" />
+    <Content Include="Content\devoops\plugins\jis\javascript\jis.jquery.js" />
+    <Content Include="Content\devoops\plugins\jis\javascript\jis.jquery.min.js" />
+    <Content Include="Content\devoops\plugins\jis\stylesheets\jis.min.css" />
+    <Content Include="Content\devoops\plugins\jis\stylesheets\style.css" />
+    <Content Include="Content\devoops\plugins\jQuery-Knob\jquery.knob.js" />
+    <Content Include="Content\devoops\plugins\jQuery-Knob\jquery.knob.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-treegrid\jquery.treegrid.bootstrap3.js" />
+    <Content Include="Content\devoops\plugins\jquery-treegrid\jquery.treegrid.css" />
+    <Content Include="Content\devoops\plugins\jquery-treegrid\jquery.treegrid.js" />
+    <Content Include="Content\devoops\plugins\jquery-treegrid\jquery.treegrid.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-addon-i18n.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-addon-i18n.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-af.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-am.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-bg.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ca.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-cs.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-da.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-de.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-el.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-es.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-et.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-eu.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-fi.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-fr.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-gl.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-he.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-hr.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-hu.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-id.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-it.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ja.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ko.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-lt.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-nl.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-no.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pl.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pt-BR.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-pt.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ro.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-ru.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sk.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sl.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sr-RS.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sr-YU.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-sv.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-th.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-tr.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-uk.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-vi.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-zh-CN.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\i18n\jquery-ui-timepicker-zh-TW.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\index.html" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\jquery-ui-sliderAccess.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.css" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.min.css" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\jquery-ui-timepicker-addon.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-be.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CA.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ky.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-nb.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-nn.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\devoops\plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="Content\devoops\plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="Content\devoops\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Content\devoops\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\devoops\plugins\jquery\jquery.min.js" />
+    <Content Include="Content\devoops\plugins\justified-gallery\jquery.justifiedGallery.js" />
+    <Content Include="Content\devoops\plugins\justified-gallery\jquery.justifiedGallery.min.js" />
+    <Content Include="Content\devoops\plugins\justified-gallery\justifiedGallery.css" />
+    <Content Include="Content\devoops\plugins\justified-gallery\justifiedGallery.min.css" />
+    <Content Include="Content\devoops\plugins\ladda\ladda-themeless.min.css" />
+    <Content Include="Content\devoops\plugins\ladda\ladda.js" />
+    <Content Include="Content\devoops\plugins\ladda\spin.js" />
+    <Content Include="Content\devoops\plugins\leaflet\images\layers-2x.png" />
+    <Content Include="Content\devoops\plugins\leaflet\images\layers.png" />
+    <Content Include="Content\devoops\plugins\leaflet\images\marker-icon-2x.png" />
+    <Content Include="Content\devoops\plugins\leaflet\images\marker-icon.png" />
+    <Content Include="Content\devoops\plugins\leaflet\images\marker-shadow.png" />
+    <Content Include="Content\devoops\plugins\leaflet\leaflet-src.js" />
+    <Content Include="Content\devoops\plugins\leaflet\leaflet.css" />
+    <Content Include="Content\devoops\plugins\leaflet\leaflet.js" />
+    <Content Include="Content\devoops\plugins\moment\moment-with-locales.min.js" />
+    <Content Include="Content\devoops\plugins\moment\moment.min.js" />
+    <Content Include="Content\devoops\plugins\morris\morris.js" />
+    <Content Include="Content\devoops\plugins\morris\morris.min.js" />
+    <Content Include="Content\devoops\plugins\nicescroll\jquery.nicescroll.js" />
+    <Content Include="Content\devoops\plugins\owl-carousel\AjaxLoader.gif" />
+    <Content Include="Content\devoops\plugins\owl-carousel\grabbing.png" />
+    <Content Include="Content\devoops\plugins\owl-carousel\owl.carousel.css" />
+    <Content Include="Content\devoops\plugins\owl-carousel\owl.carousel.js" />
+    <Content Include="Content\devoops\plugins\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Content\devoops\plugins\owl-carousel\owl.theme.css" />
+    <Content Include="Content\devoops\plugins\owl-carousel\owl.transitions.css" />
+    <Content Include="Content\devoops\plugins\print-this\printThis.js" />
+    <Content Include="Content\devoops\plugins\raphael\raphael-min.js" />
+    <Content Include="Content\devoops\plugins\raphael\raphael.js" />
+    <Content Include="Content\devoops\plugins\select2\select2-bootstrap.css" />
+    <Content Include="Content\devoops\plugins\select2\select2-spinner.gif" />
+    <Content Include="Content\devoops\plugins\select2\select2.css" />
+    <Content Include="Content\devoops\plugins\select2\select2.js" />
+    <Content Include="Content\devoops\plugins\select2\select2.min.js" />
+    <Content Include="Content\devoops\plugins\select2\select2.png" />
+    <Content Include="Content\devoops\plugins\select2\select2x2.png" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ar.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_az.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_bg.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ca.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_cs.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_da.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_de.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_el.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_es.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_et.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_eu.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_fa.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_fi.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_fr.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_gl.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_he.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_hr.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_hu.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_id.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_is.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_it.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ja.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ka.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ko.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_lt.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_lv.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_mk.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ms.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_nl.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_no.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_pl.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_pt-BR.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_pt-PT.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ro.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_rs.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ru.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_sk.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_sv.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_th.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_tr.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ua.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_ug-CN.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_uk.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_vi.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_zh-CN.js" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_zh-TW.js" />
+    <Content Include="Content\devoops\plugins\simplePagination\jquery.simplePagination.js" />
+    <Content Include="Content\devoops\plugins\simplePagination\LICENSE.txt" />
+    <Content Include="Content\devoops\plugins\simplePagination\simplePagination.css" />
+    <Content Include="Content\devoops\plugins\slick\ajax-loader.gif" />
+    <Content Include="Content\devoops\plugins\slick\fonts\slick.svg" />
+    <Content Include="Content\devoops\plugins\slick\slick-theme.css" />
+    <Content Include="Content\devoops\plugins\slick\slick.css" />
+    <Content Include="Content\devoops\plugins\slick\slick.js" />
+    <Content Include="Content\devoops\plugins\slick\slick.min.js" />
+    <Content Include="Content\devoops\plugins\sparkline\jquery.sparkline.js" />
+    <Content Include="Content\devoops\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Content\devoops\plugins\spinner\bootstrap-spinner.css" />
+    <Content Include="Content\devoops\plugins\spinner\jquery.spinner.js" />
+    <Content Include="Content\devoops\plugins\spinner\jquery.spinner.min.js" />
+    <Content Include="Content\devoops\plugins\springy\springy.js" />
+    <Content Include="Content\devoops\plugins\springy\springyui.js" />
+    <Content Include="Content\devoops\plugins\sumoselect\jquery.sumoselect.js" />
+    <Content Include="Content\devoops\plugins\sumoselect\jquery.sumoselect.min.js" />
+    <Content Include="Content\devoops\plugins\sumoselect\select_responsive.html" />
+    <Content Include="Content\devoops\plugins\sumoselect\sumoselect.css" />
+    <Content Include="Content\devoops\plugins\tinymce\jquery.tinymce.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\license.txt" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\example\dialog.html" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce-small.dev.svg" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce.dev.svg" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="Content\devoops\plugins\tinymce\themes\modern\theme.min.js" />
+    <Content Include="Content\devoops\plugins\tinymce\tinymce.min.js" />
+    <Content Include="Content\devoops\plugins\touchspin\jquery.bootstrap-touchspin.css" />
+    <Content Include="Content\devoops\plugins\touchspin\jquery.bootstrap-touchspin.js" />
+    <Content Include="Content\devoops\plugins\touchspin\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="Content\devoops\plugins\touchspin\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="Content\devoops\plugins\uploadify\jquery.uploadify.js" />
+    <Content Include="Content\devoops\plugins\uploadify\jquery.uploadify.min.js" />
+    <Content Include="Content\devoops\plugins\uploadify\no-image.gif" />
+    <Content Include="Content\devoops\plugins\uploadify\upload-video-icon.png" />
+    <Content Include="Content\devoops\plugins\uploadify\uploadify-camera.png" />
+    <Content Include="Content\devoops\plugins\uploadify\uploadify-cancel.png" />
+    <Content Include="Content\devoops\plugins\uploadify\uploadify.css" />
+    <Content Include="Content\devoops\plugins\uploadify\uploadify.swf" />
+    <Content Include="Content\devoops\plugins\xcharts\xcharts.css" />
+    <Content Include="Content\devoops\plugins\xcharts\xcharts.js" />
+    <Content Include="Content\devoops\plugins\xcharts\xcharts.min.css" />
+    <Content Include="Content\devoops\plugins\xcharts\xcharts.min.js" />
+    <Content Include="Content\fancybox\blank.gif" />
+    <Content Include="Content\fancybox\fancybox_buttons.png" />
+    <Content Include="Content\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Content\fancybox\fancybox_loading.gif" />
+    <Content Include="Content\fancybox\fancybox_overlay.png" />
+    <Content Include="Content\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Content\fancybox\fancybox_sprite.png" />
+    <Content Include="Content\img\3a513a99-87db-47c0-805b-0649ddae5c10.jpg" />
+    <Content Include="Content\img\bg.jpg" />
+    <Content Include="Content\img\bg02.png" />
+    <Content Include="Content\img\bg_thongbao.png" />
+    <Content Include="Content\img\ex\33c77e57-0dd7-46d0-95eb-1a16e4125d2e.jpg" />
+    <Content Include="Content\img\img_title.png" />
+    <Content Include="Content\img\login_icon.png" />
+    <Content Include="Content\img\Mod_bg.png" />
+    <Content Include="Content\img\noimage.png" />
+    <Content Include="Content\img\submenu.png" />
+    <Content Include="Content\jquery.fancybox-buttons.css" />
+    <Content Include="Content\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\jquery.fancybox.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\chuvanduc.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\devoops\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\devoops\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\devoops\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\devoops\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\devoops\fonts\FontAwesome.otf" />
+    <Content Include="Content\devoops\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\devoops\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\devoops\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\devoops\mobirise\fonts\mobirise.eot" />
+    <Content Include="Content\devoops\mobirise\fonts\mobirise.ttf" />
+    <Content Include="Content\devoops\mobirise\fonts\mobirise.woff" />
+    <Content Include="Content\devoops\mobirise\fonts\mobrise.woff" />
+    <Content Include="Content\devoops\mobirise\selection.json" />
+    <Content Include="Content\devoops\plugins\bootstrapvalidator\README.md" />
+    <Content Include="Content\devoops\plugins\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Content\devoops\plugins\bootstrap\bootstrap.css.map" />
+    <Content Include="Content\devoops\plugins\chartist\chartist.min.map" />
+    <Content Include="Content\devoops\plugins\chartist\LICENSE" />
+    <Content Include="Content\devoops\plugins\ckeditor\CHANGES.md" />
+    <Content Include="Content\devoops\plugins\ckeditor\LICENSE.md" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\imagebrowser\README.rst" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Content\devoops\plugins\ckeditor\plugins\wsc\README.md" />
+    <Content Include="Content\devoops\plugins\ckeditor\README.md" />
+    <Content Include="Content\devoops\plugins\ckeditor\skins\moono\readme.md" />
+    <Content Include="Content\devoops\plugins\clndr-calendar\clndr.less" />
+    <Content Include="Content\devoops\plugins\d3\LICENSE" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\.gitignore" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\bower.json" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\datetimepicker.jquery.json" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\doc.tpl" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\package.json" />
+    <Content Include="Content\devoops\plugins\datetimepicker-master\README.md" />
+    <Content Include="Content\devoops\plugins\fancybox\README.md" />
+    <Content Include="Content\devoops\plugins\fineuploader\LICENSE" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower.json" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\.bower.json" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\bower.json" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="Content\devoops\plugins\FlexSlider\bower_components\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="Content\devoops\plugins\FlexSlider\composer.json" />
+    <Content Include="Content\devoops\plugins\FlexSlider\CONTRIBUTING.md" />
+    <Content Include="Content\devoops\plugins\FlexSlider\css\base.less" />
+    <Content Include="Content\devoops\plugins\FlexSlider\css\font.less" />
+    <Content Include="Content\devoops\plugins\FlexSlider\css\mixins.less" />
+    <Content Include="Content\devoops\plugins\FlexSlider\css\resets.less" />
+    <Content Include="Content\devoops\plugins\FlexSlider\css\responsive.less" />
+    <Content Include="Content\devoops\plugins\FlexSlider\css\theme.less" />
+    <Content Include="Content\devoops\plugins\FlexSlider\css\variables.less" />
+    <Content Include="Content\devoops\plugins\FlexSlider\flexslider.less" />
+    <Content Include="Content\devoops\plugins\FlexSlider\fonts\flexslider-icon.eot" />
+    <Content Include="Content\devoops\plugins\FlexSlider\fonts\flexslider-icon.ttf" />
+    <Content Include="Content\devoops\plugins\FlexSlider\fonts\flexslider-icon.woff" />
+    <Content Include="Content\devoops\plugins\FlexSlider\LICENSE.md" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\.bowerrc" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\.jscsrc" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\.npmignore" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\bower.json" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\CONTRIBUTING.md" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\dist\jquery.min.map" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\package.json" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\README.md" />
+    <Content Include="Content\devoops\plugins\FlexSlider\node_modules\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="Content\devoops\plugins\FlexSlider\package.json" />
+    <Content Include="Content\devoops\plugins\FlexSlider\README.mdown" />
+    <Content Include="Content\devoops\plugins\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\devoops\plugins\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\devoops\plugins\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\devoops\plugins\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\devoops\plugins\fonts\FontAwesome.otf" />
+    <Content Include="Content\devoops\plugins\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\devoops\plugins\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\devoops\plugins\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\devoops\plugins\jQuery-Knob\LICENSE" />
+    <Content Include="Content\devoops\plugins\jquery-ui-timepicker-addon\LICENSE-MIT" />
+    <Content Include="Content\devoops\plugins\justified-gallery\README.md" />
+    <Content Include="Content\devoops\plugins\moment\LICENSE" />
+    <Content Include="Content\devoops\plugins\select2\bower.json" />
+    <Content Include="Content\devoops\plugins\select2\component.json" />
+    <Content Include="Content\devoops\plugins\select2\composer.json" />
+    <Content Include="Content\devoops\plugins\select2\LICENSE" />
+    <Content Include="Content\devoops\plugins\select2\package.json" />
+    <Content Include="Content\devoops\plugins\select2\README.md" />
+    <Content Include="Content\devoops\plugins\select2\release.sh" />
+    <Content Include="Content\devoops\plugins\select2\select2.jquery.json" />
+    <Content Include="Content\devoops\plugins\select2\select2_locale_en.js.template" />
+    <Content Include="Content\devoops\plugins\simplePagination\README.md" />
+    <Content Include="Content\devoops\plugins\springy\LICENSE" />
+    <Content Include="Content\devoops\plugins\sumoselect\bower.json" />
+    <Content Include="Content\devoops\plugins\sumoselect\jquery.sumoselect.jquery.json" />
+    <Content Include="Content\devoops\plugins\sumoselect\package.json" />
+    <Content Include="Content\devoops\plugins\sumoselect\README.md" />
+    <Content Include="Content\devoops\plugins\tinymce\langs\readme.md" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Content\devoops\plugins\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Content\devoops\plugins\xcharts\LICENSE" />
+    <Content Include="Content\devoops\plugins\xcharts\README.md" />
+    <Content Include="Content\devoops\plugins\slick\config.rb" />
+    <Content Include="Content\devoops\plugins\slick\fonts\slick.eot" />
+    <Content Include="Content\devoops\plugins\slick\fonts\slick.ttf" />
+    <Content Include="Content\devoops\plugins\slick\fonts\slick.woff" />
+    <Content Include="Content\devoops\plugins\slick\slick-theme.less" />
+    <Content Include="Content\devoops\plugins\slick\slick-theme.scss" />
+    <Content Include="Content\devoops\plugins\slick\slick.less" />
+    <Content Include="Content\devoops\plugins\slick\slick.scss" />
+    <Content Include="Content\devoops\plugins\jis\stylesheets\jis.scss" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.fancybox-buttons.js" />
+    <Content Include="Scripts\jquery.fancybox-media.js" />
+    <Content Include="Scripts\jquery.fancybox-thumbs.js" />
+    <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\wow.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Upload\images\adv\afdbbe2c-21f0-47af-a60c-7419ad25307c.png" />
+    <Content Include="Upload\images\banner\banner.jpg" />
+    <Content Include="Upload\images\banner\banner01.jpg" />
+    <Content Include="Upload\images\banner\banner1.jpg" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutCHUAVANDUC.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Home\ColsRightBody.cshtml" />
+    <Content Include="Views\Home\PostInCategory.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Server.ini" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{5f29149d-4260-494e-9f97-ae150358b031}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50369</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50369/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

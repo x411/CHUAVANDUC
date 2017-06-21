@@ -1,0 +1,200 @@
+﻿@using CHUAVANDUC.Models.Entity
+@model List<VD_MainMenu>
+
+@{ 
+    int i = 0;
+}
+
+<header class="row m_bottom_10">
+    <div class="row">
+        <div class="col-xs-12">
+            @*<div class="camera_wrap camera_azure_skin" id="camera_banner">
+                <div data-thumb="../../Upload/images/banner/banner.jpg" data-src="../../Upload/images/banner/banner.jpg">
+                </div>
+                <div data-thumb="../../Upload/images/banner/banner01.jpg" data-src="../../Upload/images/banner/banner01.jpg">
+                </div>
+                <div data-thumb="../../Upload/images/banner/banner1.jpg" data-src="../../Upload/images/banner/banner1.jpg">
+                </div>
+            </div>*@
+            <!-- #camera_wrap_1 -->
+            @*<div id="rev_slider">
+                <div class="slide-aboutus">
+                    <img src="../../Upload/images/banner/banner.jpg" />
+                </div>
+                <div class="slide-aboutus">
+                    <img src="../../Upload/images/banner/banner01.jpg" />
+                </div>
+                <div class="slide-aboutus">
+                    <img src="../../Upload/images/banner/banner1.jpg" />
+                </div>
+            </div>*@
+            <!-- END REVOLUTION SLIDER -->
+
+            <ul class="demo">
+                <li>
+                    <a href="#">
+                        <img src="../../Upload/images/banner/banner.jpg" alt="Alt 1">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../Upload/images/banner/banner01.jpg" alt="Alt 2">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../../Upload/images/banner/banner1.jpg" alt="Alt 3">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <nav class="navbar col-xs-12" role="navigation">
+        <div class="navbar-header">
+            <a onclick="javascript.void()" class="submenu btn btn-success"><i class="fa fa-navicon"></i></a>
+        </div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="row menuBar">
+            <ul class="col-xs-12 menu">
+                @if (Model != null && Model.Count > 0)
+                {
+                    foreach (var main in Model)
+                    {
+                        <li class="@(i == 0 ? "active" : "")">
+                            @if (main.lstSubMenu != null && main.lstSubMenu.Count > 0)
+                            {
+                                <a>@main.MainMenuName</a>
+                                <ul class="menu">
+                                    @foreach (var sub in main.lstSubMenu)
+                                    {
+                                        <li>
+                                            <a href="@Url.RouteUrl("PostInSubMenu", new { mainMenu = main.M_alias, subMenu = sub.S_alias, })" data-ajax="False">@sub.SubMenuName</a>
+                                        </li>
+                                    }
+                                </ul>
+                            }
+                            else
+                            {
+                                <a href="@Url.RouteUrl("PostInMenu", new { mainMenu = main.M_alias})" data-ajax="False">@main.MainMenuName</a>
+                            }
+                        </li>
+                        i++;
+                    }
+
+                }
+            </ul>
+        </div>
+
+
+        @*<div class="row menuBar">
+            <ul class="col-xs-12 menu">
+                <li class="active">
+                    <a href="/Home">nếp sống đạo</a>
+                </li>
+                <li class="dropdown">
+                    <a>giới thiệu</a>
+                    <ul class="menu">
+                        <li>
+                            <a href="">CLB Nếp Sống Đạo</a>
+                        </li>
+                        <li>
+                            <a href="">Nội quy CLB</a>
+                        </li>
+                        <li>
+                            <a href="">DS thành viên CLB</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a>phật pháp căn bản</a>
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Pháp môn tịnh độ</a>
+                        </li>
+                        <li>
+                            <a href="#">Pháp môn thiền định</a>
+                        </li>
+                        <li>
+                            <a href="#">Giáo lý căn bản</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a>phật pháp ứng dụng</a>
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Phật giáo và tuổi trẻ</a>
+                        </li>
+                        <li>
+                            <a href="#">Gương hạnh người xưa</a>
+                        </li>
+                        <li>
+                            <a href="#">Phật pháp và đời sống</a>
+                        </li>
+                        <li>
+                            <a href="#">Báo ứng hiện dời</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a>tin tức</a>
+                    <ul class="menu">
+                        <li>
+                            <a href="@Url.RouteUrl("PostInCategory", new { CategoryCode = "tin-tuc", SubCategoryCode = "hoat-dong-clb", })" data-ajax="False">Hoạt động CLB</a>
+                        </li>
+                        <li>
+                            <a href="#">Thông báo</a>
+                        </li>
+                        <li>
+                            <a href="#">Lịch sinh hoạt - Tu học</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a>thư viện</a>
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Kinh sách</a>
+                        </li>
+                        <li>
+                            <a href="#">Hình ảnh</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a>góc cảm xúc</a>
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Cảm xúc thiện nguyện</a>
+                        </li>
+                        <li>
+                            <a href="#">Góc thư giãn</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact.html">video-clip</a>
+                </li>
+            </ul>
+        </div>*@
+        <!-- /.navbar-collapse -->
+    </nav>
+    <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-6 col-md-9">
+            <marquee>
+                @System.Configuration.ConfigurationManager.AppSettings["SiteName"]
+            </marquee>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 padding_0">
+            <div class="input-group">
+                <input type="text" class="form-control" name="SearchPost" value="" placeholder="tìm kiếm">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" style="line-height:16px;margin-bottom:0px;" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div><!-- /input-group -->
+        </div>
+    </div>
+</header>

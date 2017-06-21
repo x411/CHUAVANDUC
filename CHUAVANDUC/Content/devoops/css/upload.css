@@ -1,0 +1,329 @@
+﻿
+/*#inputcontainer {
+    background:url("../../Html/images/upload.png") no-repeat;
+    background-size: 52px 24px;
+    height:24px;
+    width:320px;
+    margin-top:3px;
+}
+    
+#inputcontainerSld {
+    background:url("../../Html/images/upload.png") no-repeat;
+    background-size: 52px 22px;
+    height:22px;
+    width:320px;
+    margin-top:3px;
+}
+
+.input[type="file"]:hover
+{
+    opacity: 0.2; filter: alpha(opacity=30);
+}
+
+.input[type="file"]
+{
+    opacity:0;
+    height:20px;
+    width:52px;
+}
+*/   
+#dialog-confirm {
+    display:none;
+    height:auto !important;
+    z-index:10002;
+}
+
+div.custom_file_upload {
+    /*width: 230px;*/
+    height: 55px;
+    margin: 0px auto;
+    display:initial;
+}
+
+input.file {
+	width: 180px;
+	height: 20px;
+	border: 1px solid #BBB;
+	border-right: 0;
+	color: #888;
+	padding: 5px;
+	
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	
+	outline: none;
+}
+
+div.file_upload {
+	width: 80px;
+	height: 24px;
+	background: #7abcff;
+	background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee));
+	background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: -o-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: -ms-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 );
+
+	display: inline;
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+	padding-top: 8px;
+	margin-left: -5px;
+}
+div.file_upload:before {
+	content: 'UPLOAD';
+	position: absolute;
+	left: 0; right: 0;
+	text-align: center;
+	
+	cursor: pointer;
+}
+
+div.file_upload input {
+	position: relative;
+	height: 30px;
+	width: 250px;
+	display: inline;
+	cursor: pointer;
+	opacity: 0;
+}
+/* Select File*/
+div.file_select input {
+	position: relative;
+	height: 30px;
+	width: 250px;
+	display: inline;
+	cursor: pointer;
+	opacity: 0;
+}
+
+div.file_select:before {
+	content: 'SELECT FILES';
+	position: absolute;
+	left: 0; right: 0;
+	text-align: center;
+	
+	cursor: pointer;
+}
+
+div.file_select {
+	width: 95px;
+	height: 24px;
+	background: #7abcff;
+	background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee));
+	background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: -o-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: -ms-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 );
+
+	display: inline;
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+	padding-top: 8px;
+	margin-left: -5px;
+}
+/*Button Upload*/
+input.button {
+	width: 150px;
+	height: 20px;
+	border: 1px solid #BBB;
+	border-right: 0;
+	color: #888;
+	padding: 5px;
+	
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	
+	outline: none;
+}
+
+div.button_upload {
+	width: 80px;
+	height: 24px;
+	background: #7abcff;
+	background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee));
+	background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: -o-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: -ms-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 );
+
+	display: inline;
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+	padding-top: 8px;
+	margin-left:95px;
+	border-left: 1px solid rgb(101, 147, 231);
+}
+div.button_upload:before {
+	content: 'UPLOAD';
+	position: absolute;
+	left: 0; right: 0;
+	text-align: center;
+	
+	cursor: pointer;
+}
+div.button_upload input {
+	position: relative;
+	height: 30px;
+	width: 250px;
+	display: inline;
+	cursor: pointer;
+	opacity: 0;
+}
+/*btn*/
+.mybutton {
+    /*background: url("../../Html/images/btUpload.png") no-repeat;*/
+    background: url('../img/btUpload.png') no-repeat;
+    background-size: 100%;
+    border: 0;
+    width: 110px;
+    height: 24px;
+    display: inline;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 8px;
+    margin-left: 100px;
+}
+
+div.mybutton input {
+	position: relative;
+	height: 30px;
+	width: 250px;
+	display: inline;
+	cursor: pointer;
+	opacity: 0;
+}
+
+div.mybutton:before 
+{
+    
+	position: absolute;
+	left: 0; right: 0;
+	text-align: center;
+	
+	cursor: pointer;
+}
+/*========================================*/
+.btnbrowse
+{
+    background: none repeat scroll 0 0 #4096ee;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 0;
+    width: 120px;
+    height: 24px; 
+    display: inline;
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 8px;
+	margin-left:90px;
+}
+.btnbrowse:hover
+{
+    background: none repeat scroll 0 0 #1AABE7;
+    cursor:pointer;
+}
+div.btnbrowse input {
+	position: relative;
+	height: 30px;
+	width: 250px;
+	display: inline;
+	cursor: pointer;
+	opacity: 0;
+}
+
+div.btnbrowse:before 
+{
+    content: 'Browse On Server';
+	position: absolute;
+	left: 0; right: 0;
+	text-align: center;	
+	cursor: pointer;
+}
+/*====================================*/
+.status
+{
+    /*background: url("../../Html/images/icon/Loadingstatus.gif") no-repeat; 
+    background-size: 100%;*/
+    border: 0;
+    width: 30px;
+    height: 24px; 
+    display: inline;
+	position: absolute;
+	overflow: hidden;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 8px;
+	margin-left:220px;
+}
+div.status img 
+{
+    background: url("../../Html/images/icon/Loadingstatus.gif") no-repeat; 
+    background-size: 100%;
+	position: relative;
+	height: 30px;
+	width: 30px;
+	display: inline;
+}
+.disablebtn
+{
+    opacity:0.5;
+    cursor:default;
+}

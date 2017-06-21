@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = System.Configuration.ConfigurationManager.AppSettings["SiteName"];
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_LayoutCHUAVANDUC.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="title-content-page">
+            <a>
+                <h4>Tin tức >> hoạt động CLB</h4>
+            </a>
+        </div>
+    </div>
+</div>
+

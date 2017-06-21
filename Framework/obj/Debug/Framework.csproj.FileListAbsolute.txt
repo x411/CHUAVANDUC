@@ -1,0 +1,18 @@
+D:\Project\Doanhnhan\Framework\bin\Debug\Framework.dll
+D:\Project\Doanhnhan\Framework\bin\Debug\Framework.pdb
+D:\Project\Doanhnhan\Framework\obj\Debug\Framework.dll
+D:\Project\Doanhnhan\Framework\obj\Debug\Framework.pdb
+D:\Work\Project\Doanhnhan\Framework\bin\Debug\Framework.dll
+D:\Work\Project\Doanhnhan\Framework\bin\Debug\Framework.pdb
+D:\Work\Project\Doanhnhan\Framework\obj\Debug\Framework.dll
+D:\Work\Project\Doanhnhan\Framework\obj\Debug\Framework.pdb
+D:\Work\Project\Doanhnhan\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
+D:\Vo Xuan An\App\VANDUC_WEBSITE\Framework\bin\Debug\Framework.dll
+D:\Vo Xuan An\App\VANDUC_WEBSITE\Framework\bin\Debug\Framework.pdb
+D:\Vo Xuan An\App\VANDUC_WEBSITE\Framework\obj\Debug\Framework.dll
+D:\Vo Xuan An\App\VANDUC_WEBSITE\Framework\obj\Debug\Framework.pdb
+D:\Vo Xuan An\App\VANDUC_WEBSITE\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
+C:\Users\lpbin\Desktop\AN\WORK\CHUAVANDUC\Framework\bin\Debug\Framework.dll
+C:\Users\lpbin\Desktop\AN\WORK\CHUAVANDUC\Framework\bin\Debug\Framework.pdb
+C:\Users\lpbin\Desktop\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.dll
+C:\Users\lpbin\Desktop\AN\WORK\CHUAVANDUC\Framework\obj\Debug\Framework.pdb

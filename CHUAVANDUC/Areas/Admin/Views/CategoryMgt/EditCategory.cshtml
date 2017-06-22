@@ -1,0 +1,76 @@
+﻿@using CHUAVANDUC.Models.Entity
+@model VD_Category
+
+<form id="frmCategory" class="form-horizontal frmCategory" role="form" action="/admin/categorymgt/insertupdatecategory" method="post">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">@(string.IsNullOrEmpty(Model.CategoryID) ? "TẠO MỚI DANH MỤC": "CHỈNH SỬA DANH MỤC")</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="CategoryID" class="col-sm-3 control-label">Category Code</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="CategoryID" name="CategoryID" placeholder="Category code" value="@Model.CategoryID" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="CategoryName" class="col-sm-3 control-label">Category Name</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="CategoryName" name="CategoryName" placeholder="Category name" value="@Model.CategoryName" onkeyup="$('#MetaTitle').val(bodautiengviet(this.value))">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MetaTitle" class="col-sm-3 control-label">MetaTitle</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="MetaTitle" name="MetaTitle" placeholder="MetaTitle" value="@Model.MetaTitle" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MetaDescription" class="col-sm-3 control-label">MetaDescription</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="MetaDescription" name="MetaDescription" placeholder="MetaDescription" value="@Model.MetaDescription">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MetaKeywords" class="col-sm-3 control-label">MetaKeywords</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="MetaKeywords" name="MetaKeywords" placeholder="MetaKeywords" value="@Model.MetaKeywords">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="zIndex" class="col-sm-3 control-label">zIndex</label>
+            <div class="col-sm-9">
+                <input type="number" class="form-control" id="zIndex" name="zIndex" placeholder="index" value="@Model.zIndex">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="zIndex" class="col-sm-3 control-label">zIndex</label>
+            <div class="col-sm-9">
+                <input type="number" class="form-control" id="zIndex" name="zIndex" placeholder="index" value="@Model.zIndex">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="IsHomeIndex" class="col-sm-3 control-label">Home page</label>
+            <div class="col-sm-9">
+                <div class="checkbox">
+                    <input id="IsHomeIndex" type="checkbox" @(Model.IsHomeIndex ? "checked=checked" : "")>
+                    <label for="IsHomeIndex"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="IsActive" class="col-sm-3 control-label">Active</label>
+            <div class="col-sm-9">
+                <div class="checkbox">
+                    <input id="IsActive" type="checkbox" @(Model.IsActive ? "checked=checked" : "")>
+                    <label for="IsActive"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+</form>

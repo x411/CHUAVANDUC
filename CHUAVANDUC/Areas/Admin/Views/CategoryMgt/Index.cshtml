@@ -1,0 +1,120 @@
+﻿@using CHUAVANDUC.Models.Entity
+@model List<VD_Category>
+
+@{
+    ViewBag.Title = "Admin :: Category";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    int stt = 1;
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="page-title">Category <small>management</small></h2>
+        <div class="row">
+            <div class="col-xs-12">
+                <section class="widget">
+                    <header>
+                        <h4>List <span class="fw-semi-bold">category</span></h4>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            @*<a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>*@
+                        </div>
+                    </header>
+                    <div class="body">
+                        <div class="mt">
+                            <table id="datatable-table" class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="no-sort hidden-xs">#</th>
+                                        @*<th>Category Code</th>*@
+                                        <th class="no-sort hidden-xs">Name</th>
+                                        <th class="no-sort hidden-xs">MetaTitle</th>
+                                        <th class="no-sort hidden-xs">MetaKeywords</th>
+                                        @*<th class="no-sort hidden-xs">MetaDescription</th>*@
+                                        <th>Index</th>
+                                        <th class="no-sort hidden-xs">Homepage</th>
+                                        <th class="no-sort hidden-xs">Active</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Count > 0)
+                                    {
+                                        stt = 1;
+                                        foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@stt</td>
+                                                @*<td>@item.CategoryID</td>*@
+                                                <td class="hidden-xs">@item.CategoryName</td>
+                                                <td class="hidden-xs">
+                                                    @item.MetaTitle
+                                                </td>
+                                                <td class="hidden-xs">
+                                                    @item.MetaKeywords
+                                                </td>
+                                                @*<td class="hidden-xs">
+                                                    @item.MetaDescription
+                                                </td>*@
+                                                <td class="hidden-xs width-50">
+                                                    @item.zIndex
+                                                </td>
+                                                <td class="width-50">
+                                                    <span class="label @(item.IsHomeIndex ? "label-success" : "label-danger")">@(item.IsHomeIndex ? "show" : "not show")</span>
+                                                </td>
+                                                <td class="width-50">
+                                                    <span class="label @(item.IsActive ? "label-success" : "label-danger")">@(item.IsActive ? "active" : "not active")</span>
+                                                </td>
+                                                <td>
+                                                    <a title="Edit" href="/Admin/CategoryMgt/EditCategory?cateCode=@item.CategoryID" class="d_inline_b pointer" data-toggle="modal" data-target="#modalEditcategory"><i class="fa fa-edit"></i></a>
+                                                    <a title="Delete" onclick="DeleteCategory('@item.CategoryID')" class="d_inline_b pointer"><i class="fa fa-remove"></i></a>
+                                                </td>
+                                            </tr>
+                                            stt++;
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalEditcategory" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+@section styles{
+}
+
+@section scripts{
+    <script src="/Content/lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="/Content/lib/underscore/underscore.js"></script>
+    <script src="/Content/lib/backbone/backbone.js"></script>
+    <script src="/Content/lib/backbone.paginator/lib/backbone.paginator.min.js"></script>
+    <script src="/Content/lib/backgrid/lib/backgrid.min.js"></script>
+    <script src="/Content/lib/backgrid-paginator/backgrid-paginator.js"></script>
+    <script src="/Content/lib/datatables/media/js/jquery.dataTables.min.js"></script>
+
+    <!-- page application js -->
+    <script src="/Content/js/tables-dynamic.js"></script>
+    <script src="~/Scripts/app/category-mgt.js"></script>
+    <script type="text/javascript">
+
+        $("#modalEditcategory").on("show.bs.modal", function (e) {
+            var link = $(e.relatedTarget);
+            $(this).find(".modal-content").load(link.attr("href"));
+        });
+
+        //$('#CategoryName').makeMetatitle();
+
+
+    </script>
+}
+
